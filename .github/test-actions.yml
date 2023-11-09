@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-       node-version: [21.0.0]
+        node-version: [21.0.0]
     steps:
       - uses:  actions/checkout@v2
       - name: use Node.js ${{ matrix.node-version }}
@@ -18,4 +18,3 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run test
-     
